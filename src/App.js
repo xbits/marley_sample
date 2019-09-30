@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Recipes from "./Recipes";
+import Recipe from "./Recipe"
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router basename={process.env.PUBLIC_URL}>
+        <div className="container">
+
+
+            <Switch>
+                <Route exact path= "/" render={() => (
+                  <Redirect to="/recipes"/>
+                )}/>
+                 <Route exact path='/recipes' component={Recipes} />
+                 <Route path={`/recipes/:id`} component={Recipe} />
+            </Switch>
+
+
+        </div>
+      </Router>
   );
 }
 

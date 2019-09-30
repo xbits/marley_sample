@@ -1,0 +1,41 @@
+
+@import "~bootstrap";
+
+.recipe-list {
+  .recipe-card-container {
+    padding-bottom: 1em;
+
+    .recipe-card {
+      .recipe-title {
+        position: absolute;
+        color: $black;
+        padding: 0.75em;
+        text-shadow: 1px 1px 10px #FFF;
+        font-weight: bold;
+      }
+      .contentful-img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.recipe-page{
+  .recipe-image{
+    .contentful-img {
+        width: 100%;
+      }
+  }
+}
+
+.tag-list{
+  .badge{
+    margin-right: 1px;
+  }
+}
