@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import MarleyAPI from "./MarleyAPI";
 
+/**
+ * A subcomponent with a list of tags
+ */
 class TagList extends Component {
     constructor(props) {
         super(props);

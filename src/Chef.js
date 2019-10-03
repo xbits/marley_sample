@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import MarleyAPI from "./MarleyAPI";
 import PropTypes from "prop-types";
 
+/**
+ * A subcomponent for the Chef data type
+ */
 class Chef extends Component {
     constructor(props) {
         super(props);

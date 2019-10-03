@@ -7,6 +7,9 @@ import Chef from  "./Chef";
 import {Link} from "react-router-dom";
 import idx from "./lib/idx";
 
+/**
+ * The view for individual Recipe pages
+ */
 class Recipe extends Component {
     constructor(props) {
         super(props);
@@ -35,7 +38,7 @@ class Recipe extends Component {
     render() {
         let recipe = this.state.recipe;
         if(!recipe)
-            return (<p>Loading data</p>)
+            return (<p>Loading</p>)
         return (
             <div className="recipe-page">
 

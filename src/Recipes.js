@@ -5,6 +5,9 @@ import MarleyAPI from "./MarleyAPI";
 import ContentfulImage from "./ContentfulImage";
 import {Link} from 'react-router-dom';
 
+/*
+* The index page of recipes
+ */
 export default class Recipes extends Component {
 
     constructor(props) {
@@ -12,24 +15,19 @@ export default class Recipes extends Component {
         this.state = {}
     }
 
-    //function which is called the first time the component loads
     componentDidMount() {
         this.getRecipesData();
     }
 
-    //Function to get the Customer Data from json
     getRecipesData() {
-        //console.log(MarleyAPI.getRecipes())
-        //this.setState({recipeList: MarleyAPI.getRecipes()})
         MarleyAPI.getEntries('recipe').then(response => {
             this.setState({recipeList: response})
         })
     };
 
-
     render() {
         if (!this.state.recipeList)
-            return (<p>Loading data</p>)
+            return (<p>Loading</p>)
         return (
             <Row className="recipe-list">
                 {
